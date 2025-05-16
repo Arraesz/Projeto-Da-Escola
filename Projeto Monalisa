@@ -1,0 +1,28 @@
+function setup() {
+  createCanvas(400, 400);
+  let olhoX
+  let olhoY
+}
+
+function draw() {
+  background('black'); // COR DO FUNDO
+  fill('gold') // COR DO ROSTO
+  circle(200, 200, 300); // CABEÇA
+  fill('white')
+  circle(140, 150, 60); // OLHO ESQUERDO
+  circle(260, 150,60); // OLHO DIREITO
+  line(130,280,300,240); // BOCA
+  fill('black')
+  triangle(200,175,170,205,230,205); // NARIZ
+line(110,110,160,110) // SOMBRANCELHA ESQUERDA
+line(230,110,280,110) // SOMBRANCELHA DIREITA
+  
+    olhoX=map(mouseX,0,400,130,170);
+    olhoY=map(mouseY,0,400,130,170);
+    circle(olhoX,olhoY,10);
+    circle(olhoX+100,olhoY,10);
+  
+  if(mouseIsPressed) {
+    console.log(mouseX,mouseY);
+  }
+}
