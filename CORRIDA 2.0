@@ -4,8 +4,8 @@ function setup() {
 
 let xJogador = [0, 0, 0, 0];
 let yJogador = [75, 150, 225, 300];
-let jogador = ["🤬", "🐱‍👤", "👽", "😈"];
-let teclas = ["a", "l", "s", "k"];
+let jogador = ["🤬", "🐱‍👤", "👽", "😈"]; // PERSONAGENS DA CORRIDA
+let teclas = ["a", "l", "s", "k"]; // TECLAS PARA ANDAR NA CORRIDA
 let quantidade = jogador.length;
 
 function draw() {
@@ -18,9 +18,9 @@ function draw() {
 
 function ativaJogo() {
   if (focused == true) {
-    background("green");
+    background("green"); // FUNDO VERDE
   } else {
-    background("red");
+    background("red"); // FUNDO FICA VERMELHO
   }
 }
 
