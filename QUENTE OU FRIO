@@ -1,0 +1,31 @@
+et x;
+let y;
+function setup() {
+  createCanvas(400, 400);
+  fill('black') // FUNDO PRETO
+  x = random(400);
+  x = int(x);
+  y = random(400);
+  y = int(y);
+}
+
+function draw() {
+  background(220);
+ 
+  //circle(x,y,10);
+  
+  x = x + random(-10,10);
+  y = y + random (-10,10);
+  
+  x = constrain(x,0,400) ;
+  y = constrain(y,0,400);
+  
+  let distancia;
+  distancia = dist (mouseX, mouseY, x , y);
+  circle(mouseX, mouseY, distancia)
+  
+  if(distancia < 3) {
+  text('Winx quando damos nossas maos, nos tormanos poderosas, juntas somos invenciveis!',150,150,100); // TEXTO APÓS ACHAR O CIRCULO
+    noLoop();
+  }
+}
